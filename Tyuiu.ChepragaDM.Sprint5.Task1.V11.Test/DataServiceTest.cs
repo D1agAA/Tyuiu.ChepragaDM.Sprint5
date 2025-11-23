@@ -21,5 +21,5 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task1.V11.Test
             bool wait = true;
             Assert.AreEqual(wait, fileE);
         }
-    }
+    } 
 }

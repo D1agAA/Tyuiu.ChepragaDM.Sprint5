@@ -21,7 +21,7 @@ internal class Program
         DataService ds = new DataService();
 
         int startValue = -5;
-        int stopValue = 5;
+        int stopValue = 5; 
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
