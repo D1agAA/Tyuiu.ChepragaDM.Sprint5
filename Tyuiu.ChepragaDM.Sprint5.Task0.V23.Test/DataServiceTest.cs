@@ -24,5 +24,5 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task0.V23.Test
             Assert.AreEqual(wait, fileE);
 
         }
-    }
+    } 
 }
