@@ -7,7 +7,7 @@ internal class Program
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #5                                                               *");
-        Console.WriteLine("* Тема: Запись структурированных данных в текстовый файл                  *");
+        Console.WriteLine("* Тема: Класс File. Запись структурированных данных в текстовый файл      *");
         Console.WriteLine("* Задание #2                                                              *");
         Console.WriteLine("* Вариант 24                                                              *");
         Console.WriteLine("* Выполнил: Чепрага Дмитрий Максимович  | ИБКСб-25-1                      *");
