@@ -6,7 +6,7 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task0.V23.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $@"{Path.GetTempPath()}\OutPutFileTask0.txt";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
 
             double y = (1.0 + Math.Pow(x, 3)) / Math.Pow(x, 2);
 

@@ -14,11 +14,11 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task0.V23.Test
 
             int x = 3;
 
-            string path1 = @"C:\Users";
-            string path2 = @"D1agAAA\source\repos\Tyuiu.ChepragaDM.Sprint5\Tyuiu.ChepragaDM.Sprint5.Task0.V23\bin\Debug\net8.0\OutPutFileTask0.txt";
-            string fpath = Path.Combine(path1, path2);
+            string path = ds.SaveToFileTextData(x);
+             
+           
 
-            FileInfo file = new FileInfo(fpath);
+            FileInfo file = new FileInfo(path);
             bool fileE = file.Exists;
             bool wait = true;
             Assert.AreEqual(wait, fileE);
