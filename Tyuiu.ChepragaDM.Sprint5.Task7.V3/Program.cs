@@ -27,8 +27,8 @@ internal class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        string path = Path.Combine($"{Directory.GetCurrentDirectory()}", "InPutDataFileTask7V3.txt");
-        string pathToSave = Path.Combine($"{Directory.GetCurrentDirectory()}", "OutPutDataFileTask7V3.txt");
+        string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask7V3.txt");
+        string pathToSave = Path.Combine("C:", "DataSprint5", "OutPutDataFileTask7V3.txt");
 
         Console.WriteLine("Файл находится: " + path);
 
