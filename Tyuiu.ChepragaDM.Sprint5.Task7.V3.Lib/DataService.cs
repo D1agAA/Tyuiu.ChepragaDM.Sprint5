@@ -14,7 +14,7 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
             }
 
            
-            string outputDir = @"C:\DataSprint5";
+            string outputDir = @"C:/DataSprint5";
             if (!Directory.Exists(outputDir))
             {
                 Directory.CreateDirectory(outputDir);
