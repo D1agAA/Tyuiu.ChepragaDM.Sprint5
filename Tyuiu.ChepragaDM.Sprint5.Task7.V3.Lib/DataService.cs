@@ -22,7 +22,9 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
 
                  
             }
-            string outputPath = "OutPutDataFileTask7V3.txt";
+            string inputDir = Path.GetDirectoryName(path);
+            string outputPath = Path.Combine(inputDir, "OutPutDataFileTask7V3.txt");
+
             string resultText = res.ToString();
             File.WriteAllText(outputPath, resultText, Encoding.UTF8);
 
