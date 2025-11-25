@@ -20,7 +20,7 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
                     res.Append(i);
                 }
 
-
+                 
             }
             string opath = Path.Combine("C:", "DataSprint5", "OutPutDataFileTask7V3.txt");
             string resultText = res.ToString();
