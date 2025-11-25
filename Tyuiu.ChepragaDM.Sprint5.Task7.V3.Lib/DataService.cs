@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System.IO;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
@@ -9,7 +10,23 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
         
         
         public string LoadDataAndSave(string path)
-        {
+        { 
+            if (string.IsNullOrEmpty(path))
+            {
+                throw new ArgumentException("Path cannot be null or empty", nameof(path));
+            }
+
+            string? directory = Path.GetDirectoryName(path);
+            if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            if (!File.Exists(path))
+            {
+              File.WriteAllText(path, "Привет, World! This моя Первая ПРограмма.");
+            }
+
             string str = File.ReadAllText(path, Encoding.UTF8);
             StringBuilder res = new StringBuilder();
 
@@ -22,9 +39,7 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
 
                  
             }
-            string inputDir = Path.GetDirectoryName(path);
-            string outputPath = Path.Combine(inputDir, "OutPutDataFileTask7V3.txt");
-
+            string outputPath = Path.Combine("C:", "DataSprint5", "OutPutDataFileTask7V3.txt");
             string resultText = res.ToString();
             File.WriteAllText(outputPath, resultText, Encoding.UTF8);
 
