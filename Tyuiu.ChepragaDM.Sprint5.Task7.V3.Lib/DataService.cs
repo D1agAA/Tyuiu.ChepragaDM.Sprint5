@@ -39,7 +39,7 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
 
                  
             }
-            string outputPath = Path.Combine("C:", "DataSprint5", "OutPutDataFileTask7V3.txt");
+            string outputPath = Path.Combine($"{Directory.GetCurrentDirectory()}", "OutPutDataFileTask7V3.txt"); ;
             string resultText = res.ToString();
             File.WriteAllText(outputPath, resultText, Encoding.UTF8);
 
