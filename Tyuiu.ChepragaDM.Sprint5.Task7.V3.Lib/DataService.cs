@@ -8,7 +8,7 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string outputFilePath = Path.Combine(Path.GetTempPath(), "OutPutFileTask7V3");
+            string outputFilePath = Path.Combine("С:", "DataSprint5", "OutPutFileTask7V3");
 
             string content = File.ReadAllText(path, Encoding.UTF8);
             StringBuilder result = new StringBuilder();
@@ -30,9 +30,9 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
                 result.Append(c);
             }
 
-            File.WriteAllText(outputFilePath, result.ToString(), Encoding.UTF8);
+            
 
-            return outputFilePath;
+            return result.ToString();
         }
     }
 }

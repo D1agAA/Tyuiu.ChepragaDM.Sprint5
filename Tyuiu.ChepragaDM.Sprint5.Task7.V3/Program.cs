@@ -18,7 +18,7 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
        
-        Console.WriteLine("* Дан файл С:\\DataSprint5\\InPutDataFileTask7V3.txt  в котором есть      *");
+        Console.WriteLine("* Дан файл С:\\DataSprint5\\InPutDataFileTask7V.txt  в котором есть       *");
         Console.WriteLine("* набор символьных данных.Удалить все русские буквы из файла. Полученный  *");
         Console.WriteLine("* результат сохранить в файл OutPutDataFileTask7V3.txt.                   *");
 
@@ -29,8 +29,6 @@ internal class Program
         Console.WriteLine("***************************************************************************");
 
         string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask7V3.txt");
-
-
         string outputFile = Path.Combine("C:", "DataSprint5", "OutPutDataFileTask7V3.txt");
 
          
