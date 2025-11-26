@@ -1,4 +1,5 @@
-﻿using Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib;
+﻿
+using Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib;
 
 internal class Program
 {
@@ -28,7 +29,10 @@ internal class Program
         Console.WriteLine("***************************************************************************");
 
         string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask7V3.txt");
-        string pathToSave = Path.Combine("C:", "DataSprint5", "OutPutDataFileTask7V3.txt");
+
+
+        string outputFile = Path.Combine("C:", "DataSprint5", "OutPutDataFileTask7V3.txt");
+
 
         Console.WriteLine("Файл находится: " + path);
 
@@ -37,8 +41,8 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         var res = ds.LoadDataAndSave(path);
 
-        File.WriteAllText(pathToSave, res);
-        Console.WriteLine("Данные сохранены по пути: " + pathToSave);
+        File.WriteAllText(outputFile, res);
+        Console.WriteLine("Данные сохранены по пути: " + outputFile);
 
         Console.ReadKey();
     }

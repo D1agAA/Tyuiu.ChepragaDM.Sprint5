@@ -8,38 +8,32 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            if (string.IsNullOrEmpty(path))
+            string outputFilePath = Path.Combine(Path.GetTempPath(), "OutPutFileTask7V3");
+
+            string content = File.ReadAllText(path, Encoding.UTF8);
+            StringBuilder result = new StringBuilder();
+            FileInfo fileInfo = new FileInfo(outputFilePath);
+            bool filee = fileInfo.Exists;
+            if (filee)
             {
-                throw new ArgumentException("Path cannot be null or empty", nameof(path));
+                File.Delete(outputFilePath);
             }
 
-           
-            string outputDir = @"C:/DataSprint5";
-            if (!Directory.Exists(outputDir))
-            {
-                Directory.CreateDirectory(outputDir);
-            }
 
-            
-            string str = File.ReadAllText(path, Encoding.UTF8);
-            StringBuilder res = new StringBuilder();
-
-            foreach (char c in str)
+            foreach (char c in content)
             {
                 
-                if (!((c >= 'а' && c <= 'я') || (c >= 'А' && c <= 'Я') || c == 'Ё' || c == 'ё'))
-                {
-                    res.Append(c);
-                }
+                if ((c >= 'А' && c <= 'Я') || (c >= 'а' && c <= 'я'))
+                    continue;
+
+                result.Append(c);
             }
 
-            
-            string outputPath = Path.Combine(outputDir, "OutPutDataFileTask7V3.txt");
-            string resultText = res.ToString();
-            File.WriteAllText(outputPath, resultText, Encoding.UTF8);
+            File.WriteAllText(outputFilePath, result.ToString(), Encoding.UTF8);
 
-            return resultText;
+            return outputFilePath;
         }
     }
 }
+
 
