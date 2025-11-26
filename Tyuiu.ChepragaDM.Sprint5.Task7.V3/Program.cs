@@ -33,7 +33,7 @@ internal class Program
 
         string outputFile = Path.Combine("C:", "DataSprint5", "OutPutDataFileTask7V3.txt");
 
-
+         
         Console.WriteLine("Файл находится: " + path); 
 
         Console.WriteLine("***************************************************************************");

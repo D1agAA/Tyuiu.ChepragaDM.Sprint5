@@ -24,7 +24,7 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
             foreach (char c in content)
             {
                 
-                if ((c >= 'А' && c <= 'Я') || (c >= 'а' && c <= 'я'))
+                if ((c >= 'А' && c <= 'Я') || (c >= 'а' && c <= 'я')) 
                     continue;
 
                 result.Append(c);
