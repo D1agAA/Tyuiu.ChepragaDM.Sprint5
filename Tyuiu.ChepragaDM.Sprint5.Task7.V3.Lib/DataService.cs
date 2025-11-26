@@ -14,6 +14,7 @@ namespace Tyuiu.ChepragaDM.Sprint5.Task7.V3.Lib
             StringBuilder result = new StringBuilder();
             FileInfo fileInfo = new FileInfo(outputFilePath);
             bool filee = fileInfo.Exists;
+
             if (filee)
             {
                 File.Delete(outputFilePath);
